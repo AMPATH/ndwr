@@ -133,4 +133,7 @@ replace into ndwr.ndwr_ovc_patient_visits_extract_build_queue(
 
 CALL `ndwr`.`build_ndwr_otz_patient_visits`("build",1,1,1,"true");
 
+##########################################################################################
+truncate `ndwr`.`ndwr_flat_indicator_metrics`
+CALL `ndwr`.`build_ndwr_flat_indicator_metrics`('2023-03-31', '2023-04-30');
 
