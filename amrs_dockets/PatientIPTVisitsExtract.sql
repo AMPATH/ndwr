@@ -1,7 +1,9 @@
 SELECT 
     PatientPK,
+    PatientPKHash
     SiteCode,
     PatientID,
+    PatientIDHash
     FacilityID,
     Emr,
     Project,
@@ -70,6 +72,10 @@ SELECT
       WHEN  StartIPT = 0 THEN 'NO'
       ELSE NULL
     END AS 'StartIPT',
-    IndicationForIPT
+    IndicationForIPT,
+    TPTDiscontinuation,
+    DateCreated,
+    DateOfDiscontinuation,
+    Date_Last_Modified
 FROM
     ndwr.ndwr_patient_ipt_extract;
